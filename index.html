@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Infographic về công nghệ số trong học tập và video hướng dẫn học tập trực tuyến.">
+  <title>Công nghệ số trong học tập | CT005</title>
+  <style>
+    :root {
+      --navy: #123766;
+      --blue: #1f568d;
+      --cyan: #55d8e5;
+      --yellow: #ffd228;
+      --paper: #f4f8fc;
+      --ink: #18314d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    .hero {
+      padding: 4rem 1.25rem 3rem;
+      color: #fff;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(85, 216, 229, .2), transparent 22rem),
+        linear-gradient(135deg, var(--navy), var(--blue));
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0 auto .75rem;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #e4f7ff;
+      font-size: 1.1rem;
+    }
+
+    main {
+      width: min(1100px, calc(100% - 2rem));
+      margin: 2rem auto 4rem;
+    }
+
+    .card {
+      overflow: hidden;
+      margin-bottom: 2rem;
+      background: #fff;
+      border: 1px solid #dbe7f2;
+      border-radius: 1rem;
+      box-shadow: 0 12px 35px rgba(18, 55, 102, .1);
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+    }
+
+    .infographic {
+      display: block;
+      width: 100%;
+      max-height: 850px;
+      object-fit: contain;
+      background: var(--navy);
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .media {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: .75rem;
+      background: #081d36;
+    }
+
+    .note {
+      padding: .85rem 1rem;
+      color: #31516f;
+      background: #edf8fc;
+      border-left: 4px solid var(--cyan);
+      border-radius: .35rem;
+    }
+
+    footer {
+      padding: 1.5rem;
+      color: #dcecff;
+      text-align: center;
+      background: var(--navy);
+      font-size: .95rem;
+    }
+
+    footer a {
+      color: var(--yellow);
+    }
+
+    @media (max-width: 720px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Công nghệ số trong học tập</h1>
+    <p>Khám phá cách công nghệ giúp người học tiếp cận kiến thức mọi lúc, cá nhân hóa phương pháp học và kết nối hiệu quả.</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="infographic-title">
+      <img
+        class="infographic"
+        src="Lab05_Ex2.1.png"
+        alt="Infographic về lợi ích của công nghệ số trong học tập">
+      <div class="card-content">
+        <h2 id="infographic-title">Lợi ích của công nghệ số</h2>
+        <p>Infographic tóm tắt bốn lợi ích nổi bật: tiếp cận kiến thức mọi lúc, cá nhân hóa tốc độ và phương pháp học, tương tác trực quan, cùng khả năng kết nối và cộng tác.</p>
+        <p class="note"><strong>Ghi chú bản quyền:</strong> Infographic được tạo bởi Canva AI; hình ảnh sử dụng theo Unsplash License. Vui lòng giữ nguyên ghi chú khi chia sẻ.</p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="video-title">
+      <div class="card-content">
+        <h2 id="video-title">Video học tập trực tuyến</h2>
+        <p>Video đính kèm minh họa nội dung bài học. Bạn cũng có thể xem video YouTube được nhúng bên dưới.</p>
+        <div class="media-grid">
+          <div>
+            <h3>Video bài thực hành</h3>
+            <video class="media" controls preload="metadata">
+              <source src="Lab05_Ex2.2.mp4" type="video/mp4">
+              Trình duyệt của bạn không hỗ trợ video HTML5.
+            </video>
+          </div>
+          <div>
+            <h3>Video YouTube</h3>
+            <iframe
+              class="media"
+              src="https://www.youtube-nocookie.com/embed/IlU-zDU6aQ0"
+              title="Video YouTube về phương pháp học tập"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Nguyễn Công Lộc - CT005D05. Nội dung phục vụ mục đích học tập.
+  </footer>
+</body>
+</html>
