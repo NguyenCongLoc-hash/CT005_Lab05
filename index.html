@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trang giới thiệu Nguyễn Công Lộc và các sản phẩm học tập về công nghệ số.">
+  <title>Hồ sơ học tập | Nguyễn Công Lộc</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f7f9ff;
+      background: #081a34;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 15% 0%, rgb(40 94 157 / 35%), transparent 42rem),
+        #081a34;
+    }
+
+    main {
+      width: min(100% - 2rem, 1120px);
+      margin: 0 auto;
+      padding: 3.5rem 0 2rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.8rem;
+      color: #76e0e6;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 2rem;
+      align-items: center;
+      padding: clamp(1.5rem, 5vw, 3.5rem);
+      border: 1px solid rgb(149 192 238 / 18%);
+      border-radius: 1.5rem;
+      background: linear-gradient(130deg, rgb(22 50 87 / 96%), rgb(11 35 66 / 96%));
+      box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 22%);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      letter-spacing: -0.045em;
+      line-height: 1.04;
+    }
+
+    .intro {
+      max-width: 55ch;
+      margin: 1.2rem 0 0;
+      color: #c8d8ed;
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .profile-details {
+      display: grid;
+      gap: 0.9rem;
+      margin: 0;
+      padding: 1.4rem;
+      border: 1px solid rgb(149 192 238 / 16%);
+      border-radius: 1rem;
+      background: rgb(5 22 45 / 46%);
+    }
+
+    .profile-details div {
+      display: grid;
+      grid-template-columns: minmax(100px, 0.75fr) 1.25fr;
+      gap: 0.75rem;
+    }
+
+    .profile-details dt {
+      color: #91a9c7;
+    }
+
+    .profile-details dd {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: end;
+      margin: 3.5rem 0 1.25rem;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.65rem, 4vw, 2.3rem);
+      letter-spacing: -0.025em;
+    }
+
+    .section-note {
+      margin: 0 0 0.2rem;
+      color: #a9bbd3;
+      line-height: 1.5;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.15rem;
+      align-items: stretch;
+    }
+
+    .product {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgb(149 192 238 / 17%);
+      border-radius: 1rem;
+      background: #102746;
+      box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 15%);
+    }
+
+    .product-preview {
+      display: grid;
+      height: 250px;
+      place-items: center;
+      overflow: hidden;
+      background: #091a32;
+    }
+
+    .product-preview img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .pdf-preview iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #fff;
+    }
+
+    .product-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25rem;
+    }
+
+    .product-type {
+      margin: 0 0 0.5rem;
+      color: #76e0e6;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      line-height: 1.35;
+    }
+
+    .product-body > p:not(.product-type) {
+      margin: 0.65rem 0 1.1rem;
+      color: #b9c9df;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 2.7rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      margin-top: auto;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid rgb(118 224 230 / 48%);
+      border-radius: 0.65rem;
+      color: #e9ffff;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 150ms ease, border-color 150ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      border-color: #76e0e6;
+      background: rgb(118 224 230 / 12%);
+    }
+
+    .video-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      align-self: start;
+      background: #000;
+    }
+
+    .video-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgb(149 192 238 / 16%);
+      color: #91a9c7;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.25rem 0;
+    }
+
+    @media (max-width: 850px) {
+      .profile {
+        grid-template-columns: 1fr;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(100% - 1.25rem, 480px);
+        padding-top: 1.5rem;
+      }
+
+      .profile {
+        gap: 1.4rem;
+        padding: 1.4rem;
+        border-radius: 1rem;
+      }
+
+      .profile-details {
+        padding: 1rem;
+      }
+
+      .section-heading {
+        display: block;
+        margin-top: 2.5rem;
+      }
+
+      .section-note {
+        margin-top: 0.5rem;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product-preview {
+        height: 230px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="profile">
+      <div>
+        <p class="eyebrow">Hồ sơ học tập · CT005</p>
+        <h1>Xin chào,<br>mình là Nguyễn Công Lộc.</h1>
+        <p class="intro">
+          Mình là sinh viên ngành Nền tảng Công nghệ số. Đây là nơi giới thiệu một số sản phẩm học tập về ứng dụng công nghệ số trong học tập.
+        </p>
+      </div>
+      <dl class="profile-details" aria-label="Thông tin cá nhân">
+        <div>
+          <dt>Họ và tên</dt>
+          <dd>Nguyễn Công Lộc</dd>
+        </div>
+        <div>
+          <dt>MSSV</dt>
+          <dd>B2605432</dd>
+        </div>
+        <div>
+          <dt>Môn học</dt>
+          <dd>Nền tảng Công nghệ số</dd>
+        </div>
+        <div>
+          <dt>Lớp học</dt>
+          <dd>CT005D05</dd>
+        </div>
+        <div>
+          <dt>Năm học</dt>
+          <dd>2026–2027</dd>
+        </div>
+      </dl>
+    </header>
+
+    <section aria-labelledby="products-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Bài tập và sản phẩm</p>
+          <h2 id="products-title">Tác phẩm của mình</h2>
+        </div>
+        <p class="section-note">Ba định dạng, cùng một chủ đề: công nghệ trong học tập.</p>
+      </div>
+
+      <div class="products">
+        <article class="product">
+          <div class="product-preview pdf-preview">
+            <iframe
+              src="./Lab05_Ex1.2.pdf#toolbar=0&navpanes=0"
+              title="Bản xem trước PDF về ứng dụng công nghệ số trong học tập"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="product-body">
+            <p class="product-type">Sản phẩm 01 · PDF</p>
+            <h3>Ứng dụng công nghệ số trong học tập</h3>
+            <p>Tài liệu trình bày những thay đổi và lợi ích của công nghệ số đối với việc học hiện đại.</p>
+            <a class="button" href="./Lab05_Ex1.2.pdf" target="_blank" rel="noopener">Mở tài liệu PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="product">
+          <a class="product-preview" href="./Lab05_Ex2.1.png" target="_blank" rel="noopener" aria-label="Mở infographic ở kích thước đầy đủ">
+            <img
+              src="./Lab05_Ex2.1.png"
+              alt="Infographic Lợi ích của công nghệ số trong học tập, minh họa tiếp cận kiến thức, cá nhân hóa, tương tác và kết nối."
+              loading="lazy"
+            >
+          </a>
+          <div class="product-body">
+            <p class="product-type">Sản phẩm 02 · PNG</p>
+            <h3>Infographic công nghệ số</h3>
+            <p>Hình ảnh tóm tắt các lợi ích của công nghệ số, từ học tập linh hoạt đến kết nối cộng đồng.</p>
+            <a class="button" href="./Lab05_Ex2.1.png" target="_blank" rel="noopener">Xem ảnh đầy đủ ↗</a>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-preview video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/RZuY-I2eNVU"
+              title="Video về công nghệ số trong học tập trên YouTube"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="product-body">
+            <p class="product-type">Sản phẩm 03 · Video</p>
+            <h3>Công nghệ số trong học tập</h3>
+            <p>Video được đăng trên YouTube, giới thiệu chủ đề công nghệ số và việc học.</p>
+            <a class="button" href="https://www.youtube.com/watch?v=RZuY-I2eNVU" target="_blank" rel="noopener noreferrer">Xem trên YouTube ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Nguyễn Công Lộc. Bản quyền các sản phẩm thuộc về tác giả tương ứng.</p>
+      <p>Video được nhúng từ YouTube; quyền đối với video thuộc về chủ sở hữu nội dung.</p>
+    </footer>
+  </main>
+</body>
+</html>
