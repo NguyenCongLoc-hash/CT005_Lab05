@@ -19,6 +19,7 @@
 
     body {
       margin: 0;
+      min-width: 320px;
       background: radial-gradient(ellipse at top, #173f78 0, #0d2d5d 58%);
     }
 
@@ -90,11 +91,21 @@
     }
 
     .video-frame {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-frame iframe {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: 100%;
       border: 0;
-      background: #000;
+    }
+
+    .video-caption a {
+      color: #85def2;
+      text-underline-offset: 0.2em;
     }
 
     footer {
@@ -140,23 +151,25 @@
 
       <section class="video" aria-labelledby="video-title">
         <h2 id="video-title">Video: Công nghệ số trong học tập</h2>
-        <iframe
-          class="video-frame"
-          src="https://www.youtube.com/embed/RZuY-I2eNVU"
-          title="Video YouTube: Công nghệ số trong học tập"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        >
-        </iframe>
-        <p class="video-caption">Xem video về vai trò của công nghệ số trong học tập.</p>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/RZuY-I2eNVU"
+            title="Video tạo bởi CapCut, tài liệu từ Pexels và FreeSound (CC0)"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="video-caption">
+          Nếu trình phát không tải, <a href="https://www.youtube.com/watch?v=RZuY-I2eNVU" target="_blank" rel="noopener noreferrer">xem video trực tiếp trên YouTube</a>.
+        </p>
       </section>
     </section>
 
     <footer>
-      <p>© 2026 Nguyễn Công Lộc. Bản quyền infographic thuộc về tác giả tương ứng.</p>
-      <p>Video được nhúng từ YouTube; mọi quyền đối với video thuộc về chủ sở hữu nội dung.</p>
+      <p>© 2026 Nguyễn Công Lộc. Infographic được tạo bằng Canva AI.</p>
+      <p> Hình ảnh sử dụng từ Upsplash theo giấy phép Upsplash. Video được nhúng từ Youtube.</p>
     </footer>
   </main>
 </body>
