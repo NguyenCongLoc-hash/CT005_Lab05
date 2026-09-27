@@ -83,16 +83,52 @@
       font-size: 1.25rem;
     }
 
-    .video-frame {
+    .video-caption {
+      margin: 0;
+      padding: 0 1.25rem 1rem;
+      color: #d8e7ff;
+      line-height: 1.5;
+    }
+
+    .video-link {
+      position: relative;
+      display: block;
       aspect-ratio: 16 / 9;
+      overflow: hidden;
       background: #000;
     }
 
-    .video iframe {
+    .video-link img {
       display: block;
       width: 100%;
       height: 100%;
-      border: 0;
+      object-fit: cover;
+    }
+
+    .play-button {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      display: grid;
+      width: 4.5rem;
+      aspect-ratio: 1;
+      place-items: center;
+      border-radius: 50%;
+      background: #f00;
+      color: #fff;
+      font-size: 1.8rem;
+      transform: translate(-50%, -50%);
+      transition: background-color 160ms ease, scale 160ms ease;
+    }
+
+    .video-link:hover .play-button,
+    .video-link:focus-visible .play-button {
+      background: #c00;
+      scale: 1.08;
+    }
+
+    .video-link:focus-visible {
+      outline: 3px solid #85def2;
+      outline-offset: -3px;
     }
 
     footer {
@@ -130,7 +166,7 @@
     <section class="media-grid" aria-label="Infographic và video về công nghệ số trong học tập">
       <figure>
         <img
-          src="Lab05_Ex2.1.png"
+          src="./Lab05_Ex2.1.png"
           alt="Infographic: công nghệ số giúp tiếp cận kiến thức mọi lúc mọi nơi, cá nhân hóa việc học, tương tác trực quan và kết nối cộng đồng."
         >
         <figcaption>Infographic: Công nghệ số mở rộng cơ hội và cách thức học tập.</figcaption>
@@ -138,16 +174,21 @@
 
       <section class="video" aria-labelledby="video-title">
         <h2 id="video-title">Video: Công nghệ số trong học tập</h2>
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/RZuY-I2eNVU"
-            title="Video YouTube về công nghệ số trong học tập"
+        <a
+          class="video-link"
+          href="https://www.youtube.com/watch?v=RZuY-I2eNVU"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Mở video Công nghệ số trong học tập trên YouTube trong tab mới"
+        >
+          <img
+            src="https://img.youtube.com/vi/RZuY-I2eNVU/hqdefault.jpg"
+            alt="Ảnh xem trước video trên YouTube"
             loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
+          >
+          <span class="play-button" aria-hidden="true">▶</span>
+        </a>
+        <p class="video-caption">Nhấn nút phát để xem video trên YouTube.</p>
       </section>
     </section>
 
