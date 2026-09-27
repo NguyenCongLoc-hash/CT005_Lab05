@@ -90,45 +90,12 @@
       line-height: 1.5;
     }
 
-    .video-link {
-      position: relative;
-      display: block;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .video-link img {
+    .video-frame {
       display: block;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .play-button {
-      position: absolute;
-      inset: 50% auto auto 50%;
-      display: grid;
-      width: 4.5rem;
-      aspect-ratio: 1;
-      place-items: center;
-      border-radius: 50%;
-      background: #f00;
-      color: #fff;
-      font-size: 1.8rem;
-      transform: translate(-50%, -50%);
-      transition: background-color 160ms ease, scale 160ms ease;
-    }
-
-    .video-link:hover .play-button,
-    .video-link:focus-visible .play-button {
-      background: #c00;
-      scale: 1.08;
-    }
-
-    .video-link:focus-visible {
-      outline: 3px solid #85def2;
-      outline-offset: -3px;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      background: #000;
     }
 
     footer {
@@ -174,21 +141,17 @@
 
       <section class="video" aria-labelledby="video-title">
         <h2 id="video-title">Video: Công nghệ số trong học tập</h2>
-        <a
-          class="video-link"
-          href="https://www.youtube.com/watch?v=RZuY-I2eNVU"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Mở video Công nghệ số trong học tập trên YouTube trong tab mới"
+        <iframe
+          class="video-frame"
+          src="https://www.youtube.com/embed/RZuY-I2eNVU"
+          title="Video YouTube: Công nghệ số trong học tập"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
         >
-          <img
-            src="https://img.youtube.com/vi/RZuY-I2eNVU/hqdefault.jpg"
-            alt="Ảnh xem trước video trên YouTube"
-            loading="lazy"
-          >
-          <span class="play-button" aria-hidden="true">▶</span>
-        </a>
-        <p class="video-caption">Nhấn nút phát để xem video trên YouTube.</p>
+        </iframe>
+        <p class="video-caption">Xem video về vai trò của công nghệ số trong học tập.</p>
       </section>
     </section>
 
