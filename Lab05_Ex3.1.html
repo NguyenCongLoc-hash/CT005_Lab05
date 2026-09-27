@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Infographic và video giới thiệu lợi ích của công nghệ số trong học tập.">
+  <title>Lợi ích của công nghệ số trong học tập</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d2d5d;
+      color: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: radial-gradient(ellipse at top, #173f78 0, #0d2d5d 58%);
+    }
+
+    main {
+      width: min(100% - 2rem, 1100px);
+      margin: 0 auto;
+      padding: 3rem 0;
+    }
+
+    header {
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.12;
+    }
+
+    header p {
+      margin: 0;
+      color: #d8e7ff;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    figure,
+    .video {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgb(133 222 242 / 35%);
+      border-radius: 1rem;
+      background: #09234b;
+      box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 20%);
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption,
+    .video h2 {
+      margin: 0;
+      padding: 1rem 1.25rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .video h2 {
+      font-size: 1.25rem;
+    }
+
+    .video-frame {
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .video iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #c4d6f2;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.35rem 0;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        width: min(100% - 1.25rem, 540px);
+        padding: 2rem 0;
+      }
+
+      .media-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Lợi ích của công nghệ số trong học tập</h1>
+      <p>Khám phá cách công nghệ giúp việc học linh hoạt hơn, tăng khả năng tiếp cận tri thức và kết nối người học.</p>
+    </header>
+
+    <section class="media-grid" aria-label="Infographic và video về công nghệ số trong học tập">
+      <figure>
+        <img
+          src="Lab05_Ex2.1.png"
+          alt="Infographic: công nghệ số giúp tiếp cận kiến thức mọi lúc mọi nơi, cá nhân hóa việc học, tương tác trực quan và kết nối cộng đồng."
+        >
+        <figcaption>Infographic: Công nghệ số mở rộng cơ hội và cách thức học tập.</figcaption>
+      </figure>
+
+      <section class="video" aria-labelledby="video-title">
+        <h2 id="video-title">Video: Công nghệ số trong học tập</h2>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/RZuY-I2eNVU"
+            title="Video YouTube về công nghệ số trong học tập"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <p>© 2026 Nguyễn Công Lộc. Bản quyền infographic thuộc về tác giả tương ứng.</p>
+      <p>Video được nhúng từ YouTube; mọi quyền đối với video thuộc về chủ sở hữu nội dung.</p>
+    </footer>
+  </main>
+</body>
+</html>
